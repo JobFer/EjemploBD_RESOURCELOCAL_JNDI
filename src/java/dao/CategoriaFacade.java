@@ -1,8 +1,6 @@
 package dao;
 
 import entities.Categoria;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
@@ -42,9 +40,15 @@ public class CategoriaFacade extends AbstractFacade<Categoria> {
         
         EntityTransaction et = em.getTransaction();
         et.begin();            
+
+        try{
+            eJBSubordinado.subordinado();
+        }catch(Exception e){
+            System.out.println("Excepcion: " + e);
+        }
+        
         em.persist(new Categoria("miCategoria"));
 //        em.persist(new Categoria(1)); //Esto provoca una excepcion
-        eJBSubordinado.subordinado();
         et.commit();
     }
     

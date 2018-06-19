@@ -33,6 +33,7 @@ public class EJBSubordinado {
         EntityTransaction et = em.getTransaction();
         et.begin();
         em.persist(new Categoria("miCategoriaSubordinada"));
+//        em.persist(new Categoria(1));
         et.commit();
     }
 }
