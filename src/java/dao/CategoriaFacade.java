@@ -25,14 +25,9 @@ public class CategoriaFacade extends AbstractFacade<Categoria> {
     @PersistenceUnit(unitName = "EjemploBD_RESOURCELOCAL_JNDIPU")
     private EntityManagerFactory emf;
 
-//    //Tb se permite esto
-//    @PersistenceContext(unitName = "EjemploBD_RESOURCELOCAL_JNDIPU")
-//    private EntityManager em;
-        
     @Override
     protected EntityManager getEntityManager() {
         return emf.createEntityManager();
-//        return em;
     }
     
     public void crearCategoria() throws SystemException{

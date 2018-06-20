@@ -23,10 +23,6 @@ public class EJBSubordinado {
     @PersistenceUnit(unitName = "EjemploBD_RESOURCELOCAL_JNDIPU")
     private EntityManagerFactory emf;
     
-//        //Tb se permite esto
-//    @PersistenceContext(unitName = "EjemploBD_RESOURCELOCAL_JNDIPU")
-//    private EntityManager em;
-        
 //  Esto tampoco da error, aunque no lo hace caso (excepto NEVER, que sí es atendida)
 //    @TransactionAttribute(value = TransactionAttributeType.REQUIRED)
 //    @TransactionAttribute(value = TransactionAttributeType.REQUIRES_NEW)
