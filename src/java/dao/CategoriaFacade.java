@@ -32,6 +32,7 @@ public class CategoriaFacade extends AbstractFacade<Categoria> {
     @Override
     protected EntityManager getEntityManager() {
         return emf.createEntityManager();
+//        return em;
     }
     
     public void crearCategoria() throws SystemException{
